@@ -36,7 +36,7 @@ function backgroundrawer() {
     console.log("backgroundrawer");
 };
 
-window.addEventListener("keydown1", myKeydown1);
+window.addEventListener("keydown", myKeydown1);
 function myKeydown1(e) {
     keystroke1 = e.keyCode;
     console.log(keystroke1);
@@ -62,7 +62,8 @@ function down1(){
         car1_y = car1_y + 10;
         console.log("Down Arrow Key x=" + car1_x + " y= " + car1_y);
         backgroundrawer();
-        car1drawer();           
+        car1drawer();     
+        car2drawer();      
     }; 
 };
 function up1(){
@@ -71,6 +72,7 @@ function up1(){
         console.log("Up Arrow Key x=" + car1_x + "   y= " + car1_y);
         backgroundrawer();
         car1drawer();
+        car2drawer();
     };
 };
 function right1(){
@@ -79,6 +81,7 @@ function right1(){
         console.log("Right Arrow Key x=" + car1_x + " y= " + car1_y);
         backgroundrawer();
         car1drawer();
+        car2drawer();
     };
 };
 function left1(){
@@ -86,6 +89,64 @@ function left1(){
         car1_x = car1_x - 10;
         console.log("Left Arrow Key x=" + car1_x + " y= " + car1_y);
         backgroundrawer();
+        car1drawer();
+        car2drawer();
+    };
+};
+window.addEventListener("keydown", myKeydown2);
+function myKeydown2(e) {
+    keystroke2 = e.keyCode;
+    console.log(keystroke2);
+    if(keystroke2 == '83'){
+        down2();
+        console.log("Down");
+    };
+    if(keystroke2 == '87'){
+        up2();
+        console.log("Up");
+    };
+    if(keystroke2 == '68'){
+        right2();
+        console.log("Right");
+    };
+    if(keystroke2 == '65'){
+        left2();
+        console.log("Left");
+    };
+};
+function down2(){
+    if(car2_y <= 700){
+        car2_y = car2_y + 10;
+        console.log("Down Arrow Key x=" + car2_x + " y= " + car2_y);
+        backgroundrawer();
+        car2drawer();
+        car1drawer();          
+    }; 
+};
+function up2(){
+    if(car2_y >= 0){
+        car2_y = car2_y - 10;
+        console.log("Up Arrow Key x=" + car2_x + "   y= " + car2_y);
+        backgroundrawer();
+        car2drawer();
+        car1drawer();
+    };
+};
+function right2(){
+    if(car2_x <=840){
+        car2_x = car2_x + 10;
+        console.log("Right Arrow Key x=" + car2_x + " y= " + car2_y);
+        backgroundrawer();
+        car2drawer();
+        car1drawer();
+    };
+};
+function left2(){
+    if(car2_x >=0){
+        car2_x = car2_x - 10;
+        console.log("Left Arrow Key x=" + car2_x + " y= " + car2_y);
+        backgroundrawer();
+        car2drawer();
         car1drawer();
     };
 };
